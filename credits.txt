@@ -1,0 +1,13 @@
+Credits:
+-----------(Main devs Moridin,memlock)------------
+
+-holystone production for there 3.3.5 db,and lua fixes
+-Bounty Hunter by Shaddoow
+-paikproductions for some vendors
+-Vincent van Daal-for more of them
+-Skreem(stormwind vaults,and Scarlet Hands INSTANCE)
+-KLOKKEN10(DEATH CAVES instance)
+-Linkn of MMOwned/Djz119, Yeta of MMowned and Arasil(for Alcz raid)
+-Lilpimp and Nomad repack(credits for horde,alliance mall,proffesion city)
+-Since first public realase(v2.4) memlock made various fixes(vendors fixes,lua fixes...etc)--tnx man
+
