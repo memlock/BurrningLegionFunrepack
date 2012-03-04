@@ -1,0 +1,36 @@
+--[[ Borean Tundra -- Crypt Crawler.lua
+
+This script was written and is protected
+by the GPL v2. This script was released
+by MikeBeck  of the BLUA Scripting
+Project. Please give proper accredidations
+when re-releasing or sharing this script
+with others in the emulation community.
+
+~~End of License Agreement
+-- MikeBeck, December, 30th, 2008. ]]
+
+
+function CryptCrawler_OnCombat(Unit, Event)
+Unit:RegisterEvent("CryptCrawler_CryptScarabs", 6000, 1)
+end
+
+function CryptCrawler_CryptScarabs(pUnit, Event) 
+pUnit:CastSpell(31600) 
+end
+
+function CryptCrawler_OnLeaveCombat(Unit, Event) 
+Unit:RemoveEvents() 
+end
+
+function CryptCrawler_OnDied(Unit, Event) 
+Unit:RemoveEvents()
+end
+
+function CryptCrawler_OnKilledTarget(Unit, Event) 
+end
+
+RegisterUnitEvent(25227, 1, "CryptCrawler_OnCombat")
+RegisterUnitEvent(25227, 2, "CryptCrawler_OnLeaveCombat")
+RegisterUnitEvent(25227, 3, "CryptCrawler_OnKilledTarget")
+RegisterUnitEvent(25227, 4, "CryptCrawler_OnDied")

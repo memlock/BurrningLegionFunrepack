@@ -1,0 +1,36 @@
+--[[ Azshara -- Great Wavethrasher.lua
+
+This script was written and is protected
+by the GPL v2. This script was released
+by MikeBeck  of the BLUA Scripting
+Project. Please give proper accredidations
+when re-releasing or sharing this script
+with others in the emulation community.
+
+~~End of License Agreement
+-- MikeBeck, November, 6th, 2008. ]]
+
+
+function GreatWavethrasher_OnCombat(Unit, Event)
+Unit:RegisterEvent("GreatWavethrasher_Thrash", 5000, 0)
+end
+
+function GreatWavethrasher_Thrash(pUnit, Event) 
+pUnit:FullCastSpellOnTarget(3391, pUnit:GetMainTank()) 
+end
+
+function GreatWavethrasher_OnLeaveCombat(Unit, Event) 
+Unit:RemoveEvents() 
+end
+
+function GreatWavethrasher_OnDied(Unit, Event) 
+Unit:RemoveEvents()
+end
+
+function GreatWavethrasher_OnKilledTarget(Unit, Event) 
+end
+
+RegisterUnitEvent(6349, 1, "GreatWavethrasher_OnCombat")
+RegisterUnitEvent(6349, 2, "GreatWavethrasher_OnLeaveCombat")
+RegisterUnitEvent(6349, 3, "GreatWavethrasher_OnKilledTarget")
+RegisterUnitEvent(6349, 4, "GreatWavethrasher_OnDied")
